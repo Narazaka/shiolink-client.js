@@ -1,10 +1,17 @@
 {
   "name": "shiolink-client",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "SHIOLINK client SHIORI",
+  "main": "./dist/shiolink-client.js",
+  "types": "./dist/shiolink-client.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepare": "npm run dist",
+    "prepublishOnly": "npm run lint",
+    "dist": "shx rm -rf dist && tsc",
+    "lint": "tslint -p ."
   },
   "author": "narazaka",
   "license": "MIT",
@@ -12,6 +19,7 @@
     "@types/node": "^9.6.1",
     "@types/uuid": "^3.4.3",
     "shioriloader": "^2.0.1",
+    "shx": "^0.2.2",
     "tslint": "^5.9.1",
     "typescript": "^2.8.1"
   },
