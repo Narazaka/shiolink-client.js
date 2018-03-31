@@ -20,7 +20,7 @@ export class ShiolinkClient implements Shiori {
 
     request(request: string) {
         const checkRequest = `*S:${uuidv4()}${crlf}`;
-        return new Promise((resolve ,reject) => {
+        return new Promise((resolve, reject) => {
             this.input.once("data", (error, checkResponse) => {
                 if (error) return reject(error);
                 if (checkRequest !== checkResponse) reject();
