@@ -23,6 +23,7 @@
     "@types/uuid": "^3.4.3",
     "mocha": "^5.2.0",
     "shiori-dll-downloader": "^1.0.1",
+    "shiori-encode-layer": "^2.0.0",
     "shiorif": "^2.2.0",
     "shiorijk": "^1.1.2",
     "shioriloader": "^2.0.1",
@@ -32,7 +33,6 @@
     "typescript": "^2.9.2"
   },
   "dependencies": {
-    "shiori-encode-layer": "^2.0.0",
     "uuid": "^3.2.1"
   }
 }
