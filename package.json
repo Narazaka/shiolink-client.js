@@ -24,6 +24,8 @@
     "typescript": "^2.8.1"
   },
   "dependencies": {
+    "shiori-encode-layer": "^1.0.0",
+    "ts-node": "^5.0.1",
     "uuid": "^3.2.1"
   }
 }
