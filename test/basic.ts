@@ -28,10 +28,9 @@ describe("ShiolinkClient", () => {
                 const ps = spawn(shiolinkAdapterPath, [dllpath(shiori.dir, shiori.dll)]);
                 ps.stdout.resume();
 
-                const client = new ShioriEncodeLayer( new ShiolinkClient(ps.stdout, ps.stdin));
+                const client = new ShioriEncodeLayer(new ShiolinkClient(ps.stdout, ps.stdin));
                 ps.on("close", (code) => {
                     assert.equal(code, 0);
-                    // resolve();
                 });
 
                 const shiorif = new Shiorif(client);
@@ -44,7 +43,6 @@ describe("ShiolinkClient", () => {
 
                 assert.equal(await shiorif.load(dirpath(shiori.dir)), 1);
 
-                // const getVersion = await shiorif.getVersion2();
                 let getVersionString = await client.request(new ShioriJK.Message.Request({
                     request_line: {version: "2.6", method: "GET Version"},
                     headers: {

@@ -2,8 +2,8 @@
   "name": "shiolink-client",
   "version": "1.0.0",
   "description": "SHIOLINK client SHIORI",
-  "main": "./dist/shiolink-client.js",
-  "types": "./dist/shiolink-client.d.ts",
+  "main": "./dist/lib/shiolink-client.js",
+  "types": "./dist/lib/shiolink-client.d.ts",
   "files": [
     "dist"
   ],
