@@ -1,2 +1,8 @@
 node_modules
 dist
+*.dll
+misaka_vars.txt
+satori_savedata.txt
+satori_savebackup.txt
+aya5_variable.cfg
+yaya_variable.cfg

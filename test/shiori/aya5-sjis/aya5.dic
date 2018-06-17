@@ -1,0 +1,37 @@
+#define	C_CRLF2 C_CRLF+C_CRLF
+#define	C_CRLF CHR(0xd)+CHR(0xa)
+
+load
+{
+    S_CHARSET = 'Shift_JIS'
+}
+
+unload
+{
+
+}
+
+request
+{
+    _request = _argv[0]
+
+    _id_header_start = STRSTR(_request, C_CRLF + 'ID: ', 0)
+    if _id_header_start == -1 {
+        "SHIORI/3.0 400 Bad Request%(C_CRLF)Charset: %(S_CHARSET)%(C_CRLF2)"
+        return
+    }
+
+    _id_header_start += 6
+    _id_header_end = STRSTR(_request, C_CRLF, _id_header_start)
+    _id = SUBSTR(_request, _id_header_start, _id_header_end - _id_header_start)
+
+    _ref0_header_start = STRSTR(_request, C_CRLF + 'Reference0: ', 0) + 14
+    _ref0_header_end = STRSTR(_request, C_CRLF, _ref0_header_start)
+    _ref0 = SUBSTR(_request, _ref0_header_start, _ref0_header_end - _ref0_header_start)
+
+    if _id == "OnBoot" {
+        "SHIORI/3.0 200 OK%(C_CRLF)Charset: %(S_CHARSET)%(C_CRLF)Value: 能勢電鉄の表現と%(_ref0)だよ%(C_CRLF2)"
+    } else {
+        "SHIORI/3.0 200 OK%(C_CRLF)Charset: %(S_CHARSET)%(C_CRLF)Value: 能勢電鉄の表現と%(_ref0)テストだよ%(C_CRLF2)"
+    }
+}

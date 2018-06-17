@@ -1,0 +1,4 @@
+$OnBoot
+能勢電鉄の表現と{$reference(0)}だよ
+$OnTest
+能勢電鉄の表現と{$reference(0)}テストだよ

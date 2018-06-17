@@ -1,0 +1,2 @@
+dic, aya5.dic
+charset, Shift_JIS

@@ -1,0 +1,2 @@
+dic, yaya.dic
+charset, UTF-8

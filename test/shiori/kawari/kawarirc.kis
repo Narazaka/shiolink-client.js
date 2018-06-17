@@ -1,0 +1,7 @@
+System.Callback.OnGET: $(
+    if $[ ${System.Request.ID} == "OnBoot" ] (
+        能勢電鉄の表現と${System.Request.Reference0}だよ
+    ) else (
+        能勢電鉄の表現と${System.Request.Reference0}テストだよ
+    )
+)

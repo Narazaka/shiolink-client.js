@@ -1,0 +1,2 @@
+event.OnBoot: 能勢電鉄の表現と${system.Reference0}だよ
+event.OnTest: 能勢電鉄の表現と${system.Reference0}テストだよ
