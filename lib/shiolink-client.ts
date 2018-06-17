@@ -18,7 +18,7 @@ export class ShiolinkClient implements RawShiori {
         });
     }
 
-    request(request: Buffer) {
+    request(request: ArrayBuffer) {
         const checkRequest = `*S:${uuidv4()}${crlf}`;
         return new Promise((resolve, reject) => {
             this.input.once("data", (checkResponseBuffer: Buffer) => {
@@ -27,11 +27,11 @@ export class ShiolinkClient implements RawShiori {
                 resolve();
             });
             this.output.write(checkRequest);
-        }).then(() => new Promise<Buffer>((resolve) => {
+        }).then(() => new Promise<ArrayBuffer>((resolve) => {
             this.input.once("data", (response: Buffer) => {
-                resolve(response);
+                resolve(response.buffer as ArrayBuffer);
             });
-            this.output.write(request);
+            this.output.write(new Buffer(request));
         }));
     }
 
