@@ -5,7 +5,7 @@
   "main": "./dist/lib/shiolink-client.js",
   "types": "./dist/lib/shiolink-client.d.ts",
   "files": [
-    "dist"
+    "dist/lib"
   ],
   "scripts": {
     "prepare": "npm run dist",
