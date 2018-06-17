@@ -11,7 +11,7 @@
     "prepare": "npm run dist",
     "prepublishOnly": "npm run lint && npm run test",
     "dist": "shx rm -rf dist && tsc",
-    "test": "ts-node ./test/shiori/download.ts && mocha",
+    "test": "node ./test/download-shiolink-adapter.js && ts-node ./test/shiori/download.ts && mocha",
     "lint": "tslint -p ."
   },
   "author": "narazaka",
