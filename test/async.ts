@@ -25,7 +25,8 @@ describe("ShiolinkClient", () => {
                     assert.equal(code, 0);
                 });
 
-                const shiorif = new Shiorif.Synchronized(client);
+                const shiorif = new Shiorif(client);
+                shiorif.synchronized = true;
                 shiorif.autoConvertRequestVersion = "3.0";
                 shiorif.autoAdjustToResponseCharset = true;
                 shiorif.defaultHeaders = {
