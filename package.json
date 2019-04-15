@@ -28,7 +28,7 @@
     "shiorijk": "^1.1.2",
     "shioriloader": "^2.0.1",
     "shx": "^0.3.0",
-    "ts-node": "^7.0.0",
+    "ts-node": "^8.1.0",
     "tslint": "^5.10.0",
     "typescript": "^2.9.2"
   },
