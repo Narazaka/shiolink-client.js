@@ -24,7 +24,7 @@
     "mocha": "^6.2.2",
     "shiori-dll-downloader": "^1.0.2",
     "shiori-encode-layer": "^2.0.0",
-    "shiorif": "^3.0.0",
+    "shiorif": "^3.0.2",
     "shiorijk": "^1.1.2",
     "shioriloader": "^2.0.1",
     "shx": "^0.3.0",
