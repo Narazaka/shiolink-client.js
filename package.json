@@ -19,9 +19,9 @@
   "devDependencies": {
     "@types/jszip": "^3.1.4",
     "@types/mocha": "^5.2.2",
-    "@types/node": "^10.3.3",
+    "@types/node": "^12.12.14",
     "@types/uuid": "^3.4.3",
-    "mocha": "^5.2.0",
+    "mocha": "^6.2.2",
     "shiori-dll-downloader": "^1.0.2",
     "shiori-encode-layer": "^2.0.0",
     "shiorif": "^3.0.0",
@@ -30,7 +30,7 @@
     "shx": "^0.3.0",
     "ts-node": "^7.0.0",
     "tslint": "^5.10.0",
-    "typescript": "^2.9.2"
+    "typescript": "^3.7.2"
   },
   "dependencies": {
     "uuid": "^3.2.1"
