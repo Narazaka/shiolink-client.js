@@ -18,7 +18,7 @@
   "license": "Zlib",
   "devDependencies": {
     "@types/jszip": "^3.1.4",
-    "@types/mocha": "^5.2.2",
+    "@types/mocha": "^7.0.0",
     "@types/node": "^12.12.14",
     "@types/uuid": "^3.4.3",
     "mocha": "^6.2.2",
